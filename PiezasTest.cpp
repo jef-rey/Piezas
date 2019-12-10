@@ -35,7 +35,7 @@ TEST(PiezasTest, testPieceAtInvalid){
 
 TEST(PiezasTest, testDropPieceX){
   Piezas test;
-  test.dropPiece(0,1);
+  test.dropPiece(0);
   Piece test_piece = test.pieceAt(0,1);
   ASSERT_TRUE(X);
 }
