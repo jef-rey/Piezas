@@ -20,8 +20,9 @@ TEST(PiezasTest, sanityCheck)
 }
 
 TEST(PiezasTest, testPieceAtBlank){
-  PiezasTest test;
-  ASSERT_EQ(test.pieceAt(0,0), Blank );
+  Piezas test;
+  Piece test_piece = test.pieceAt(0,0);
+  ASSERT_EQ(test_piece, Blank );
 }
 
 //TEST(PiezasTest, testPieceAtInvalid){
