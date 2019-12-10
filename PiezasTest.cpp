@@ -61,4 +61,19 @@ TEST(PiezasTest, testFullColumn){
   ASSERT_TRUE(Blank);
 }
   
+TEST(PiezasTest, testXWins){
+  Piezas test;
+  test.dropPiece(3);// X
+  test.dropPiece(2);// O
+  test.dropPiece(0);// X
+  test.dropPiece(1);// O
+  test.dropPiece(3);// X
+  test.dropPiece(0);// O
+  test.dropPiece(1);// X
+  test.dropPiece(2);// O
+  test.dropPiece(2);// X
+  test.dropPiece(1);// O
+  test.dropPiece(0);// X
+  test.dropPiece(3);// O
+  ASSERT_TRUE(X);
 
