@@ -44,7 +44,7 @@ void Piezas::reset()
       board[i][j] = Blank;
     }
   }
-  turn = X;
+  //turn = X;
 }
 
 /**
