@@ -19,9 +19,9 @@ TEST(PiezasTest, sanityCheck)
 	ASSERT_TRUE(true);
 }
 
-TEST(PiezasTest, testDropPieceX){
+TEST(PiezasTest, testPieceAtBlank){
   PiezasTest test;
-  ASSERT_EQ(test.dropPiece(), O);
+  ASSERT_EQ(test.pieceAt(0,0), Blank );
 }
 
 TEST(PiezasTest, testDropPieceO){
