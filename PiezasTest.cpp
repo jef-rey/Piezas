@@ -58,7 +58,7 @@ TEST(PiezasTest, testFullColumn){
   test.dropPiece(0);
   test.dropPiece(0);
   Piece test_piece = test.pieceAt(0,2);
-  ASSERT_FALSE(Blank);
+  ASSERT_FALSE(O);
 }
   
 
