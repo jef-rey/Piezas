@@ -52,5 +52,13 @@ TEST(PiezasTest, testDropPieceO){
   ASSERT_TRUE(O);
 }
 
-
+TEST(PiezasTest, testFullColumn){
+  Piezas test;
+  test.dropPiece(0);
+  test.dropPiece(0);
+  test.dropPiece(0);
+  Piece test_piece = test.pieceAt(0,2);
+  ASSERT_FALSE(Blank);
+}
+  
 
