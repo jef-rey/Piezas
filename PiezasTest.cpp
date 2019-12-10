@@ -75,5 +75,7 @@ TEST(PiezasTest, testXWins){
   test.dropPiece(1);// O
   test.dropPiece(0);// X
   test.dropPiece(3);// O
+  Piece test_piece = test.gameState();
   ASSERT_TRUE(X);
+}
 
