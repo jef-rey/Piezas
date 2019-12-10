@@ -97,3 +97,18 @@ TEST(PiezasTest, testDraw){
   Piece test_piece = test.gameState();
   ASSERT_TRUE(Blank);
 }
+
+
+TEST(PiezasTest, testGameNotOver){
+  Piezas test;
+  test.dropPiece(3);// X
+  test.dropPiece(3);// O
+  test.dropPiece(2);// X
+  test.dropPiece(3);// O
+  test.dropPiece(1);// X
+  test.dropPiece(1);// O
+  test.dropPiece(0);// X
+  Piece test_piece = test.gameState();
+  ASSERT_TRUE(Invalid);
+}
+
