@@ -18,3 +18,14 @@ TEST(PiezasTest, sanityCheck)
 {
 	ASSERT_TRUE(true);
 }
+
+TEST(PiezasTest, testDropPieceX){
+  Piezas test;
+  ASSERT_EQ(test.testDropPiece(), O);
+}
+
+TEST(PiezasTest, testDropPieceO){
+  Piezas test;
+  test.dropPiece();
+  ASSERT_EQ(test.testDropPiece(), X);
+}
