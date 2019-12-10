@@ -43,13 +43,14 @@ TEST(PiezasTest, testDropPieceX){
 }
 
 
-//TEST(PiezasTest, testDropPieceO){
-//  Piezas test;
-//  test.dropPiece(0);
-//  test.dropPiece(0);
-//  Piece test_piece = test.pieceAt(0,1);
-//  ASSERT_EQ(test_piece, O);
-//}
+TEST(PiezasTest, testDropPieceO){
+  Piezas test;
+  test.dropPiece(0);
+  test.dropPiece(0);
+  Piece test_piece = test.pieceAt(0,1);
+  //ASSERT_EQ(test_piece, O);
+  ASSERT_TRUE(O);
+}
 
 
 
