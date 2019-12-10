@@ -24,7 +24,7 @@ TEST(PiezasTest, testPieceAtBlank){
   ASSERT_EQ(test.pieceAt(0,0), Blank );
 }
 
-TEST(PiezasTest, testPieceAtInvalid){
-  PiezasTest test;
-  ASSERT_EQ(test.pieceAt(4,5), Invalid );
-}
+//TEST(PiezasTest, testPieceAtInvalid){
+//  PiezasTest test;
+//  ASSERT_EQ(test.pieceAt(4,5), Invalid );
+//}
