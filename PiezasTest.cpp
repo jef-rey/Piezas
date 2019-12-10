@@ -21,11 +21,11 @@ TEST(PiezasTest, sanityCheck)
 
 TEST(PiezasTest, testDropPieceX){
   Piezas test;
-  ASSERT_EQ(test.testDropPiece(), O);
+  ASSERT_EQ(test.dropPiece(), O);
 }
 
 TEST(PiezasTest, testDropPieceO){
   Piezas test;
-  test.dropPiece();
-  ASSERT_EQ(test.testDropPiece(), X);
+  test.dropPiece(column);
+  ASSERT_EQ(test.dropPiece(), X);
 }
