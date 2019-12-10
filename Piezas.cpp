@@ -22,6 +22,7 @@
 **/
 Piezas::Piezas()
 {
+  board.resize(3); // resize board vector
   for (int i = 0; i < BOARD_ROWS; i++){
     for (int j = 0; j < BOARD_COLS; j++){
       board[i][j] = Blank;
@@ -77,7 +78,7 @@ Piece Piezas::pieceAt(int row, int column)
  * or horizontally. If both X's and O's have the same max number of pieces in a
  * line, it is a tie.
 **/
-Piece Piezas::gameState()
+Piece Piezas::gameState() // getWinner
 {
     return Blank;
 }
