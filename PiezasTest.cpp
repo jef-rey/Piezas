@@ -20,12 +20,12 @@ TEST(PiezasTest, sanityCheck)
 }
 
 TEST(PiezasTest, testDropPieceX){
-  Piezas test;
+  PiezasTest test;
   ASSERT_EQ(test.dropPiece(), O);
 }
 
 TEST(PiezasTest, testDropPieceO){
-  Piezas test;
+  PiezasTest test;
   test.dropPiece(column);
   ASSERT_EQ(test.dropPiece(), X);
 }
