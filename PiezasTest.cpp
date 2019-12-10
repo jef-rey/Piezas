@@ -29,10 +29,18 @@ TEST(PiezasTest, testPieceAtBlank){
 TEST(PiezasTest, testPieceAtInvalid){
   Piezas test;
   Piece test_piece = test.pieceAt(8,9);
-  //ASSERT_EQ(test_piece, Invalid);
   ASSERT_TRUE(Invalid);
 }
-//TEST(PiezasTest, testPieceAtInvalid){
-//  PiezasTest test;
-//  ASSERT_EQ(test.pieceAt(4,5), Invalid );
-//}
+
+
+TEST(PiezasTest, testDropPieceX){
+  Piezas test;
+  test.dropPiece(0,1);
+  Piece test_piece = test.pieceAt(0,1);
+  ASSERT_TRUE(X);
+}
+
+
+
+
+
