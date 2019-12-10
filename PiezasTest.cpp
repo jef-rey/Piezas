@@ -28,8 +28,8 @@ TEST(PiezasTest, testPieceAtBlank){
 
 TEST(PiezasTest, testPieceAtInvalid){
   Piezas test;
-  Piece test_piece = test.pieceAt(4,5);
-  ASSERT_EQ(test_piece, Invalid );
+  Piece test_piece = test.pieceAt(8,9);
+  ASSERT_EQ(test_piece, Invalid);
 }
 //TEST(PiezasTest, testPieceAtInvalid){
 //  PiezasTest test;
