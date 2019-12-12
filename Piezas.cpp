@@ -45,6 +45,7 @@ Piezas::Piezas()
 void Piezas::reset()
 {
 
+  //this should be the initial gameState. blank board, x's turn.
   for(int i = 0; i < (int)board.size(); i++){
     for(int j = 0; j < (int)board.size(); j++){
       board[i][j] = Blank;
@@ -72,7 +73,7 @@ Piece Piezas::dropPiece(int column)
     turn = X;
   }
 
-  if( column < BOARD_COLS || column > 0){
+  if( column > BOARD_COLS || column < 0){
     return Invalid;
   }
   
