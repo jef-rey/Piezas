@@ -164,9 +164,7 @@ Piece Piezas::gameState() // getWinner
   //check for winner
   if(xMax == oMax){
     return Blank;
-  }
-
-  if(xMax > oMax){
+  }else if(xMax > oMax){
     return X;
   }else{
     return O;
