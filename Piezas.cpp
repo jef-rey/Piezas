@@ -112,5 +112,65 @@ Piece Piezas::pieceAt(int row, int column)
 **/
 Piece Piezas::gameState() // getWinner
 {
+  //invalid if game isnt' over
+  for (int i = 0; i < 3; i++){
+    for (int j = 0; j < 4; j++){
+      if(board[i][j] == Blank){
+        return Invalid;
+      }
+    }
+  }
+
+  int xCount = 0;
+  int oCount = 0;
+  int xMax = 0;
+  int oMax = 0;
+
+  // for horizontal
+  for (int i = 0; i < 3; i++){
+    for (int j = 0; j < 4; j++){
+      if(board[i][j] == X){
+        xCount++;
+        if(xCount > xMax){
+          xMax = xCount;
+        }
+      }else{
+        oCount++;
+        if(oCount > oMax){
+          oMax = oCount;
+        }
+      }
+    }
+  }
+
+
+  // for vert
+  for (int j = 0; j < 3; j++){
+    for (int i = 0; i < 4; i++){
+      if(board[i][j] == X){
+        xCount++;
+        if(xCount > xMax){
+          xMax = xCount;
+        }
+      }else{
+        oCount++;
+        if(oCount > oMax){
+          oMax = oCount;
+        }
+      }
+    }
+  }
+
+  //check for winner
+  if(xMax == oMax){
     return Blank;
+  }
+
+  if(xMax > oMax){
+    return X;
+  }else{
+    return O;
+  }
+
+
 }
