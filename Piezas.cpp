@@ -82,6 +82,7 @@ Piece Piezas::dropPiece(int column)
    }else{
     placePiece = Blank; 
    }
+  }
     //return Blank;
     return placePiece;
 }
