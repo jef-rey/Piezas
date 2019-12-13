@@ -126,7 +126,7 @@ Piece Piezas::gameState() // getWinner
   int xMax = 0;
   int oMax = 0;
 
-  // for horizontal
+  // for vert
   for (int i = 0; i < 3; i++){
     for (int j = 0; j < 4; j++){
       if(board[i][j] == X){
@@ -134,17 +134,19 @@ Piece Piezas::gameState() // getWinner
         if(xCount > xMax){
           xMax = xCount;
         }
+        oCount = 0;
       }else{
         oCount++;
         if(oCount > oMax){
           oMax = oCount;
         }
+        xCount=0;
       }
     }
   }
 
 
-  // for vert
+  // for horizontal
   for (int j = 0; j < 4; j++){
     for (int i = 0; i < 3; i++){
       if(board[i][j] == X){
