@@ -61,7 +61,7 @@ TEST(PiezasTest, testFullColumn){
   //ASSERT_TRUE(Blank);
 }
   
-TEST(PiezasTest, testOWins){
+TEST(PiezasTest, testXWins){
   Piezas test;
   test.dropPiece(3);// X
   test.dropPiece(2);// O
@@ -76,7 +76,7 @@ TEST(PiezasTest, testOWins){
   test.dropPiece(0);// X
   test.dropPiece(3);// O
   Piece test_piece = test.gameState();
-  ASSERT_EQ(test_piece, O);
+  ASSERT_EQ(test_piece, X);
   //ASSERT_TRUE(X);
 }
 
