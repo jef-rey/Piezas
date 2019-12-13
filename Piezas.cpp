@@ -134,13 +134,11 @@ Piece Piezas::gameState() // getWinner
         if(xCount > xMax){
           xMax = xCount;
         }
-        oCount = 0;
       }else{
         oCount++;
         if(oCount > oMax){
           oMax = oCount;
         }
-        xCount=0;
       }
     }
   }
