@@ -29,7 +29,8 @@ TEST(PiezasTest, testPieceAtBlank){
 TEST(PiezasTest, testPieceAtInvalid){
   Piezas test;
   Piece test_piece = test.pieceAt(8,9);
-  ASSERT_TRUE(Invalid);
+  ASSERT_EQ(test_piece, Invalid);
+  //ASSERT_TRUE(Invalid);
 }
 
 
@@ -48,8 +49,8 @@ TEST(PiezasTest, testDropPieceO){
   test.dropPiece(0);
   test.dropPiece(0);
   Piece test_piece = test.pieceAt(0,1);
-  //ASSERT_EQ(test_piece, O);
-  ASSERT_TRUE(O);
+  ASSERT_EQ(test_piece, O);
+  //ASSERT_TRUE(O);
 }
 
 TEST(PiezasTest, testFullColumn){
@@ -58,7 +59,8 @@ TEST(PiezasTest, testFullColumn){
   test.dropPiece(0);
   test.dropPiece(0);
   Piece test_piece = test.dropPiece(0);
-  ASSERT_TRUE(Blank);
+  ASSERT_EQ(test_piece, Blank);
+  //ASSERT_TRUE(Blank);
 }
   
 TEST(PiezasTest, testXWins){
@@ -76,7 +78,8 @@ TEST(PiezasTest, testXWins){
   test.dropPiece(0);// X
   test.dropPiece(3);// O
   Piece test_piece = test.gameState();
-  ASSERT_TRUE(X);
+  ASSERT_EQ(test_piece, X);
+  //ASSERT_TRUE(X);
 }
 
 
@@ -95,7 +98,8 @@ TEST(PiezasTest, testDraw){
   test.dropPiece(1);// X
   test.dropPiece(0);// O
   Piece test_piece = test.gameState();
-  ASSERT_TRUE(Blank);
+  ASSERT_EQ(test_piece, Blank);
+  //ASSERT_TRUE(Blank);
 }
 
 
@@ -109,7 +113,8 @@ TEST(PiezasTest, testGameNotOver){
   test.dropPiece(1);// O
   test.dropPiece(0);// X
   Piece test_piece = test.gameState();
-  ASSERT_TRUE(Invalid);
+  ASSERT_EQ(test_piece, Invalid);
+  //ASSERT_TRUE(Invalid);
 }
 
 
