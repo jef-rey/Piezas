@@ -38,8 +38,8 @@ TEST(PiezasTest, testDropPieceX){
   test.dropPiece(0);
   //Piece test_piece = test.pieceAt(0,0); // (0,1)
   Piece test_piece = test.dropPiece(0);
-  //ASSERT_EQ(test_piece, X);
-  ASSERT_TRUE(X);
+  ASSERT_EQ(test_piece, X);
+  //ASSERT_TRUE(X);
 }
 
 
