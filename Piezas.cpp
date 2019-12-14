@@ -117,8 +117,8 @@ Piece Piezas::gameState() // getWinner
   //    }
   //  }
 
-  int xCount = 0;
-  int oCount = 0;
+  int xCount;// = 0;
+  int oCount;// = 0;
   int xMax = 0;
   int oMax = 0;
 
