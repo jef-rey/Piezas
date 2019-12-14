@@ -96,7 +96,7 @@ TEST(PiezasTest, testXWins){
   test.dropPiece(2); //x wins horizontally
 
   Piece test_piece = test.gameState();
-  ASSERT_EQ(test_piece, X);
+  ASSERT_EQ(test_piece, O);
 }
 
 
