@@ -113,8 +113,13 @@ Piece Piezas::pieceAt(int row, int column)
 Piece Piezas::gameState() // getWinner
 {
   //invalid if game isnt' over
-  for (int i = 0; i < 3; i++){
-    for (int j = 0; j < 4; j++){
+//  for (int i = 0; i < 3; i++){
+//    for (int j = 0; j < 4; j++){
+
+
+  for (int i = 0; i < BOARD_ROWS; i++){
+    for (int j = 0; j < BOARD_COLS; j++){
+
       if(board[i][j] == Blank){
         return Invalid;
       }
@@ -127,10 +132,12 @@ Piece Piezas::gameState() // getWinner
   int oMax = 0;
 
   // for vert
-  for (int i = 0; i < 3; i++){
+  //for (int i = 0; i < 3; i++){
+  for (int i = 0; i < BOARD_ROWS; i++){
     int xCount = 0;
     int oCount = 0;
-    for (int j = 0; j < 4; j++){
+    //for (int j = 0; j < 4; j++){
+    for (int j = 0; j < BOARD_COLS; j++){
       if(board[i][j] == X){
         xCount++;
         if(xCount > xMax){
@@ -149,10 +156,12 @@ Piece Piezas::gameState() // getWinner
 
 
   // for horizontal
-  for (int j = 0; j < 4; j++){
+  //for (int j = 0; j < 4; j++)
+  for (int j = 0; j < BOARD_COLS; j++)
     int xCount = 0;
     int oCount = 0;
-    for (int i = 0; i < 3; i++){
+    //for (int i = 0; i < 3; i++){
+    for (int i = 0; i < BOARD_ROWS; i++){
       if(board[i][j] == X){
         xCount++;
         if(xCount > xMax){
