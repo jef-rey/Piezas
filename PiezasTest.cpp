@@ -33,6 +33,14 @@ TEST(PiezasTest, testPieceAtInvalid){
   //ASSERT_TRUE(Invalid);
 }
 
+TEST(PiezasTest, testPieceAtInvalidNeg){
+  Piezas test;
+  Piece test_piece = test.dropPiece(-1);
+  ASSERT_EQ(test_piece, Invalid);
+  //ASSERT_TRUE(Invalid);
+}
+
+
 
 TEST(PiezasTest, testDropPieceX){
   Piezas test;
@@ -64,9 +72,9 @@ TEST(PiezasTest, testFullColumn){
 TEST(PiezasTest, testXWins){
   Piezas test;
   test.dropPiece(3);// X
-  test.dropPiece(0);// O
+  test.dropPiece(-1);// O
   test.dropPiece(2);// x
-  test.dropPiece(0);// O
+  test.dropPiece(5);// O
   test.dropPiece(1);// X
   test.dropPiece(3);// O
   test.dropPiece(0);// X
