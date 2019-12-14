@@ -112,9 +112,9 @@ TEST(PiezasTest, testGameNotOver){
   test.dropPiece(1);// X
   test.dropPiece(1);// O
   test.dropPiece(0);// X
-  //  Piece test_piece = test.gameState();
-  //  ASSERT_EQ(test_piece, Invalid);
-  ASSERT_TRUE(Invalid);
+  Piece test_piece = test.gameState();
+  ASSERT_EQ(test_piece, Invalid);
+  //ASSERT_TRUE(Invalid);
 }
 
 
