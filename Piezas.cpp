@@ -13,13 +13,13 @@
  * [0,0][0,1][0,2][0,3]
  * So that a piece dropped in column 2 should take [0,2] and the next one
  * dropped in column 2 should take [1,2].
-**/
+ **/
 
 
 /**
  * Constructor sets an empty board (default 3 rows, 4 columns) and 
  * specifies it is X's turn first
-**/
+ **/
 Piezas::Piezas()
 {
   board.resize(BOARD_ROWS);
@@ -35,13 +35,13 @@ Piezas::Piezas()
 
 
   turn = X;
-  
+
 }
 
 /**
  * Resets each board location to the Blank Piece value, with a board of the
  * same size as previously specified
-**/
+ **/
 void Piezas::reset()
 {
 
@@ -61,7 +61,7 @@ void Piezas::reset()
  * In that case, placePiece returns Piece Blank value 
  * Out of bounds coordinates return the Piece Invalid value
  * Trying to drop a piece where it cannot be placed loses the player's turn
-**/ 
+ **/ 
 Piece Piezas::dropPiece(int column)
 {
   Piece placePiece;
@@ -77,28 +77,28 @@ Piece Piezas::dropPiece(int column)
   if(column > 4 || column < 0){
     return Invalid;
   }
-  
+
   for (int i =0; i < BOARD_ROWS; i++){
-   if(board[i][column] == Blank){
-    board[i][column] = placePiece;
-   }else{
-    placePiece = Blank; 
-   }
+    if(board[i][column] == Blank){
+      board[i][column] = placePiece;
+    }else{
+      placePiece = Blank; 
+    }
   }
-    //return Blank;
-    return placePiece;
+  //return Blank;
+  return placePiece;
 }
 
 /**
  * Returns what piece is at the provided coordinates, or Blank if there
  * are no pieces there, or Invalid if the coordinates are out of bounds
-**/
+ **/
 Piece Piezas::pieceAt(int row, int column)
 {
   if(row > BOARD_ROWS || row < 0 || column > BOARD_COLS || column < 0){
     return Invalid;
   }
-    return board[row][column];
+  return board[row][column];
 }
 
 /**
@@ -109,7 +109,7 @@ Piece Piezas::pieceAt(int row, int column)
  * the most adjacent pieces in a single line. Lines can go either vertically
  * or horizontally. If both X's and O's have the same max number of pieces in a
  * line, it is a tie.
-**/
+ **/
 Piece Piezas::gameState() // getWinner
 {
   //invalid if game isnt' over
@@ -128,6 +128,8 @@ Piece Piezas::gameState() // getWinner
 
   // for vert
   for (int i = 0; i < 3; i++){
+    int xCount = 0;
+    int oCount = 0;
     for (int j = 0; j < 4; j++){
       if(board[i][j] == X){
         xCount++;
@@ -148,6 +150,8 @@ Piece Piezas::gameState() // getWinner
 
   // for horizontal
   for (int j = 0; j < 4; j++){
+    int xCount = 0;
+    int oCount = 0;
     for (int i = 0; i < 3; i++){
       if(board[i][j] == X){
         xCount++;
@@ -166,12 +170,12 @@ Piece Piezas::gameState() // getWinner
   }
 
   //check for winner
-  if(xMax = oMax){
-    return Blank;
+  if(xMax < oMax){
+    return O;
   }else if(xMax > oMax){
     return X;
   }else{
-    return O;
+    return Blank;
   }
 
 }
