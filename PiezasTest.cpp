@@ -97,8 +97,8 @@ TEST(PiezasTest, testDraw){
   test.dropPiece(2);// O
   test.dropPiece(1);// X
   test.dropPiece(0);// O
-  Piece test_piece = test.gameState();
-  ASSERT_EQ(test_piece, Blank);
+  //Piece test_piece = test.gameState();
+  ASSERT_EQ(test.gameState(), Blank);
   //ASSERT_TRUE(Blank);
 }
 
