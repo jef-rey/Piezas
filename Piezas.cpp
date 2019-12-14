@@ -158,11 +158,9 @@ Piece Piezas::gameState() // getWinner
   // for horizontal
   //for (int j = 0; j < 4; j++)
   for (int j = 0; j < BOARD_COLS; j++)
-    int xCount = 0;
-    int oCount = 0;
     //for (int i = 0; i < 3; i++){
     for (int i = 0; i < BOARD_ROWS; i++){
-      if(board[i][j] == X){
+      if(board[j][i] == X){
         xCount++;
         if(xCount > xMax){
           xMax = xCount;
