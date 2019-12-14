@@ -116,14 +116,14 @@ Piece Piezas::gameState() // getWinner
 //    for (int j = 0; j < 4; j++){
 
 
-  for (int i = 0; i < BOARD_ROWS; i++){
-    for (int j = 0; j < BOARD_COLS; j++){
-
-      if(board[i][j] == Blank){
-        return Invalid;
-      }
-    }
-  }
+//  for (int i = 0; i < BOARD_ROWS; i++){
+//    for (int j = 0; j < BOARD_COLS; j++){
+//
+//      if(board[i][j] == Blank){
+//        return Invalid;
+//      }
+//    }
+//  }
 
   int xCount = 0;
   int oCount = 0;
@@ -143,6 +143,8 @@ Piece Piezas::gameState() // getWinner
           xMax = xCount;
         }
         oCount=0;
+      }else if (board[i][j] == Blank){
+        return Invalid;
       }else{
         oCount++;
         if(oCount > oMax){
@@ -183,5 +185,5 @@ Piece Piezas::gameState() // getWinner
   }else{
     return Blank;
   }
-return Blank;
+//return Blank;
 }
